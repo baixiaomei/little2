@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": { // window 配置 改变全局页面的样式可以不配置，在页面分别设置
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "油条儿",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#ddd"
+  }
+}

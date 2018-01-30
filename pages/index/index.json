@@ -1,0 +1,10 @@
+{
+  // window 配置 改变当前页面的样式 这里的window会覆盖外面全局的Window样式
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "油条儿",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#ddd"
+  }
+}
