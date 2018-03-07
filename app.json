@@ -1,13 +1,37 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/logs/logs"
+    "pages/board/index",
+    "pages/search/index",
+    "pages/my/index"
   ],
-  "window": { // window 配置 改变全局页面的样式可以不配置，在页面分别设置
+  "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "油条儿",
-    "navigationBarTextStyle": "black",
-    "backgroundColor": "#ddd"
+    "navigationBarBackgroundColor": "#eee",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#000",
+    "color": "#ccc",
+    "list": [
+      {
+        "iconPath": "images/board_dark.png",
+        "selectedIconPath": "images/board.png",
+        "pagePath": "pages/board/index",
+        "text": "榜单"
+      },
+      {
+        "iconPath": "images/search_dark.png",
+        "selectedIconPath": "images/search.png",
+        "pagePath": "pages/search/index",
+        "text": "搜索"
+      },
+      {
+        "iconPath": "images/my_dark.png",
+        "selectedIconPath": "images/my.png",
+        "pagePath": "pages/my/index",
+        "text": "我的"
+      }
+    ]
   }
 }

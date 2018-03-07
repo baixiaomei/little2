@@ -1,0 +1,29 @@
+<!--pages/board/board.wxml-->
+<scroll-view class="my_board" scroll-y="{{isScroll}}">
+  <view>
+    <swiper indicator-dots="{{indicatorDots}}" indicator-color="rgba(255,255,255,0.6)" indicator-active-color="rgba(250,0,0,0.9)"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" previous-margin="5rpx">
+      <block wx:for="{{imgUrls}}" wx:for-index="indexitem" wx:key="indexitem" wx:for-item="imgitem">
+        <swiper-item>
+          <image src="{{imgitem}}"  lazy-load="true" class="slide-image" width="100%" height="380rpx"/>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="nav_list">
+    <view class="list" wx:for="{{nav}}" wx:key="index">
+      <image src="{{item.img}}"></image>
+      <text class="txt">{{item.text}}</text>
+    </view>
+  </view>
+  <view class="oilcar">
+    <view>
+      <text class="title">{{bannerList.title}}</text><icon> > </icon>
+    </view>
+    <view class="block">
+      <view class="img_list" wx:for="{{bannerList.imgList}}" wx:for-item="imgitem" wx:key="index">
+        <image src="{{imgitem.img}}"></image>
+      </view>
+    </view>
+  </view>
+</scroll-view>
