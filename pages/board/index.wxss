@@ -1,1 +1,65 @@
 /* pages/board/board.wxss */
+.my_board {
+  width:100%;
+  height:100%;
+}
+swiper {
+  height:380rpx;
+}
+.my_board swiper image{
+  width:100%;
+  height:380rpx;
+  display: block;
+}
+
+.nav_list{
+  width:100%;
+  display:flex;
+  margin-top:10px;
+  flex-wrap: wrap;
+}
+.nav_list .list{
+  width:25%;
+  text-align: center;
+}
+.nav_list .list image{
+  width:38px;
+  height:38px;
+  display:block;
+  margin:0 auto;
+}
+
+.nav_list .list .txt{
+  font-size:12px;
+  text-align: center;
+  line-height: 28px;
+}
+
+.oilcar{
+  width:100%;
+  margin-top:10px;
+}
+.oilcar .title{
+  text-align: left;
+  margin-left:5px;
+  font-size:18px;
+  line-height: 30px;
+}
+.oilcar .block{
+  width:100%;
+  height:75px;
+  display:flex;
+  overflow-x:scroll; 
+}
+.oilcar .block::-webkit-scrollbar{
+  display:none;
+}
+.oilcar .block .img_list{
+  display:flex;
+  flex-direction: column;
+}
+.oilcar .block .img_list image{
+  width:125px;
+  height:75px;
+  display:block;
+}
