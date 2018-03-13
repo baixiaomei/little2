@@ -1,4 +1,7 @@
 // pages/search/search.js
+
+var  app = getApp()
+// console.log(app)
 Page({
 
   /**
@@ -62,19 +65,59 @@ Page({
     }
   },
 
+  toastfn: function () {
+    wx.showToast({
+      title: '页面正在创建',
+      icon: 'success',
+      // icon: 'loading',
+      // icon: 'none',
+      mask: true
+    })
+    // 显示模态弹框
+    // wx.showModal({
+    //   content: '您的余额不足',
+    //   showCancel: true,
+    //   success: function (res) {
+    //     if (res.confirm) {
+    //       console.log('用户点击确定')
+    //     } else if (res.cancel) {
+    //       console.log('用户点击取消')
+    //     }
+    //   }
+    // })
+  },
+  productFn: function () {
+    // 显示操作菜单
+    wx.showActionSheet({
+      itemList: ['添加', '删除'],
+      success: function (res) {
+        // console.log(res.tapIndex)
+      },
+      fail: function (res) {
+        // console.log(res)
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(getCurrentPages())
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    console.log(this)
-    console.log(this.data.bannerList.imgList)
+    // console.log(this.data.bannerList.imgList)
+    wx.getLocation({
+      type: 'wgs84',
+      success: (res) => {
+        var latitude = res.latitude // 经度
+        var longitude = res.longitude // 纬度
+        // console.log(latitude + '和' + longitude)
+      }
+    })
   },
 
   /**
@@ -116,6 +159,19 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
+    //拨打电话
+    wx.makePhoneCall({
+      phoneNumber: '18301012472' //仅为示例，并非真实的电话号码
+    })
+  },
+  // 热门产品点击事件
+  clickEvent () {
+    onlyFromCamera: true,
+    wx.scanCode({
+      success: (res) => {
+        console.log(1)
+      }
+    })
 
   }
 })

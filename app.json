@@ -2,7 +2,9 @@
   "pages": [
     "pages/board/index",
     "pages/search/index",
-    "pages/my/index"
+    "pages/my/index",
+    "pages/notice/show",
+    "pages/detail/detail"
   ],
   "window": {
     "backgroundTextStyle": "light",

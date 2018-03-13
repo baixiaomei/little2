@@ -50,6 +50,7 @@ swiper {
   height:75px;
   display:flex;
   overflow-x:scroll; 
+  margin-top:10px;
 }
 .oilcar .block::-webkit-scrollbar{
   display:none;
@@ -57,6 +58,7 @@ swiper {
 .oilcar .block .img_list{
   display:flex;
   flex-direction: column;
+  margin-right:10px;
 }
 .oilcar .block .img_list image{
   width:125px;
